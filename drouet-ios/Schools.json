@@ -1,0 +1,10 @@
+[
+    {
+        "category": "Ingénierie",
+        "schools": ["École Polytechnique", "École Centrale", "INSA Lyon"]
+    },
+    {
+        "category": "Commerce",
+        "schools": ["HEC Paris", "ESSEC", "ESC Grenoble"]
+    }
+]

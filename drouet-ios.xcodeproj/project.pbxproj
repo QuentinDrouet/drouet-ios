@@ -11,6 +11,18 @@
 		CD429BEC2B0B6C2900B5823E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429BEB2B0B6C2900B5823E /* ContentView.swift */; };
 		CD429BEE2B0B6C2A00B5823E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD429BED2B0B6C2A00B5823E /* Assets.xcassets */; };
 		CD429BF12B0B6C2A00B5823E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD429BF02B0B6C2A00B5823E /* Preview Assets.xcassets */; };
+		CD429C052B0B789000B5823E /* SchoolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C042B0B789000B5823E /* SchoolListView.swift */; };
+		CD429C072B0B789B00B5823E /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C062B0B789B00B5823E /* SwipeCardView.swift */; };
+		CD429C092B0B78A500B5823E /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C082B0B78A500B5823E /* RankingView.swift */; };
+		CD429C0B2B0B791C00B5823E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C0A2B0B791C00B5823E /* School.swift */; };
+		CD429C0D2B0B792400B5823E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C0C2B0B792400B5823E /* Card.swift */; };
+		CD429C0F2B0B793200B5823E /* SchoolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C0E2B0B793200B5823E /* SchoolListViewModel.swift */; };
+		CD429C112B0B794500B5823E /* SwipeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C102B0B794500B5823E /* SwipeCardViewModel.swift */; };
+		CD429C132B0B798C00B5823E /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C122B0B798C00B5823E /* RankingViewModel.swift */; };
+		CD429C172B0B79A400B5823E /* cards.json in Sources */ = {isa = PBXBuildFile; fileRef = CD429C162B0B79A400B5823E /* cards.json */; };
+		CD429C1B2B0B913D00B5823E /* schools.json in Resources */ = {isa = PBXBuildFile; fileRef = CD429C1A2B0B913D00B5823E /* schools.json */; };
+		CD429C1D2B0B928800B5823E /* AddSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C1C2B0B928800B5823E /* AddSchoolView.swift */; };
+		CD429C1F2B0B9F3400B5823E /* EditSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C1E2B0B9F3400B5823E /* EditSchoolView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +31,18 @@
 		CD429BEB2B0B6C2900B5823E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD429BED2B0B6C2A00B5823E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD429BF02B0B6C2A00B5823E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD429C042B0B789000B5823E /* SchoolListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListView.swift; sourceTree = "<group>"; };
+		CD429C062B0B789B00B5823E /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		CD429C082B0B78A500B5823E /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		CD429C0A2B0B791C00B5823E /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		CD429C0C2B0B792400B5823E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CD429C0E2B0B793200B5823E /* SchoolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewModel.swift; sourceTree = "<group>"; };
+		CD429C102B0B794500B5823E /* SwipeCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardViewModel.swift; sourceTree = "<group>"; };
+		CD429C122B0B798C00B5823E /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		CD429C162B0B79A400B5823E /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
+		CD429C1A2B0B913D00B5823E /* schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schools.json; sourceTree = "<group>"; };
+		CD429C1C2B0B928800B5823E /* AddSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolView.swift; sourceTree = "<group>"; };
+		CD429C1E2B0B9F3400B5823E /* EditSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSchoolView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +75,11 @@
 		CD429BE82B0B6C2900B5823E /* drouet-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CD429C032B0B787500B5823E /* Resources */,
+				CD429C022B0B786900B5823E /* ViewModels */,
+				CD429C012B0B786200B5823E /* Models */,
+				CD429C002B0B784400B5823E /* Views */,
 				CD429BE92B0B6C2900B5823E /* drouet_iosApp.swift */,
-				CD429BEB2B0B6C2900B5823E /* ContentView.swift */,
 				CD429BED2B0B6C2A00B5823E /* Assets.xcassets */,
 				CD429BEF2B0B6C2A00B5823E /* Preview Content */,
 			);
@@ -65,6 +92,47 @@
 				CD429BF02B0B6C2A00B5823E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD429C002B0B784400B5823E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD429BEB2B0B6C2900B5823E /* ContentView.swift */,
+				CD429C042B0B789000B5823E /* SchoolListView.swift */,
+				CD429C062B0B789B00B5823E /* SwipeCardView.swift */,
+				CD429C082B0B78A500B5823E /* RankingView.swift */,
+				CD429C1C2B0B928800B5823E /* AddSchoolView.swift */,
+				CD429C1E2B0B9F3400B5823E /* EditSchoolView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD429C012B0B786200B5823E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD429C0A2B0B791C00B5823E /* School.swift */,
+				CD429C0C2B0B792400B5823E /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD429C022B0B786900B5823E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CD429C0E2B0B793200B5823E /* SchoolListViewModel.swift */,
+				CD429C102B0B794500B5823E /* SwipeCardViewModel.swift */,
+				CD429C122B0B798C00B5823E /* RankingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD429C032B0B787500B5823E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD429C1A2B0B913D00B5823E /* schools.json */,
+				CD429C162B0B79A400B5823E /* cards.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD429C1B2B0B913D00B5823E /* schools.json in Resources */,
 				CD429BF12B0B6C2A00B5823E /* Preview Assets.xcassets in Resources */,
 				CD429BEE2B0B6C2A00B5823E /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +207,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD429BEC2B0B6C2900B5823E /* ContentView.swift in Sources */,
+				CD429C1F2B0B9F3400B5823E /* EditSchoolView.swift in Sources */,
+				CD429C112B0B794500B5823E /* SwipeCardViewModel.swift in Sources */,
+				CD429C0B2B0B791C00B5823E /* School.swift in Sources */,
+				CD429C172B0B79A400B5823E /* cards.json in Sources */,
+				CD429C0D2B0B792400B5823E /* Card.swift in Sources */,
 				CD429BEA2B0B6C2900B5823E /* drouet_iosApp.swift in Sources */,
+				CD429C132B0B798C00B5823E /* RankingViewModel.swift in Sources */,
+				CD429C0F2B0B793200B5823E /* SchoolListViewModel.swift in Sources */,
+				CD429C092B0B78A500B5823E /* RankingView.swift in Sources */,
+				CD429C052B0B789000B5823E /* SchoolListView.swift in Sources */,
+				CD429C1D2B0B928800B5823E /* AddSchoolView.swift in Sources */,
+				CD429C072B0B789B00B5823E /* SwipeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
