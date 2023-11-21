@@ -6,15 +6,29 @@
 //
 
 import SwiftUI
+import CardStack
 
 struct SwipeCardView: View {
+    @ObservedObject var viewModel = CardViewModel()
+    
     var body: some View {
-        Text("Swipe")
+        NavigationView {
+            CardStack(
+                direction: LeftRight.direction,
+                data: viewModel.cards,
+                onSwipe: { card, direction in
+                    print("Swiped \(card) to \(direction)")
+                },
+                content: { card, direction, isOnTop in
+                    CardView(card: card)
+                }
+            )
+            .environment(\.cardStackConfiguration, CardStackConfiguration(
+              maxVisibleCards: 3,
+              cardOffset: 20
+            ))
+            .navigationTitle("Cards")
+        }
     }
 }
 
-struct SwipeCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwipeCardView()
-    }
-}
