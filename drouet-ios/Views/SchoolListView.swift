@@ -12,33 +12,36 @@ struct SchoolListView: View {
     @State private var addSchool = false
     @State private var editingSchool: School?
     let dateFormatter: DateFormatter
-
+    
     init() {
         dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
     }
-
+    
     var body: some View {
         NavigationView {
-            List(viewModel.schools) { school in
-                VStack(alignment: .leading) {
-                    AsyncImage(url: school.imageUrl) { image in
-                        image.resizable()
-                    } placeholder: {
-                        ProgressView()
+            List {
+                ForEach(viewModel.schools) { school in
+                    VStack(alignment: .leading) {
+                        AsyncImage(url: school.imageUrl) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 100)
+                        
+                        Text(school.name).font(.headline)
+                        Text(school.category).font(.subheadline)
+                        Text(school.description).font(.body)
+                        Text("Fondée le : \(dateFormatter.string(from: school.foundationDate))")
+                        Text("Nombre d'étudiants : \(school.studentCount)")
                     }
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 100)
-
-                    Text(school.name).font(.headline)
-                    Text(school.category).font(.subheadline)
-                    Text(school.description).font(.body)
-                    Text("Fondée le : \(dateFormatter.string(from: school.foundationDate))")
-                    Text("Nombre d'étudiants : \(school.studentCount)")
+                    .onTapGesture {
+                        editingSchool = school
+                    }
                 }
-                .onTapGesture {
-                    editingSchool = school
-                }
+                .onDelete(perform: viewModel.deleteSchool)
             }
             .navigationBarTitle("Écoles")
             .navigationBarItems(trailing: Button(action: {

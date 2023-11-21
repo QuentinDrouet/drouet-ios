@@ -9,17 +9,17 @@ import Foundation
 
 class SchoolListViewModel: ObservableObject {
     @Published var schools: [School] = []
-
+    
     init() {
         loadSchools()
     }
-
+    
     func loadSchools() {
         guard let url = Bundle.main.url(forResource: "schools", withExtension: "json") else {
             print("Erreur : fichier JSON introuvable.")
             return
         }
-
+        
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
@@ -31,15 +31,19 @@ class SchoolListViewModel: ObservableObject {
             print("Erreur lors de la lecture ou du décodage du JSON : \(error)")
         }
     }
-
+    
     
     func addSchool(_ school: School) {
-            schools.append(school)
-        }
+        schools.append(school)
+    }
     
     func updateSchool(_ updatedSchool: School) {
-            if let index = schools.firstIndex(where: { $0.id == updatedSchool.id }) {
-                schools[index] = updatedSchool
-            }
+        if let index = schools.firstIndex(where: { $0.id == updatedSchool.id }) {
+            schools[index] = updatedSchool
         }
+    }
+    
+    func deleteSchool(at offsets: IndexSet) {
+        schools.remove(atOffsets: offsets)
+    }
 }
