@@ -19,7 +19,7 @@ struct AddOrEditSchoolView: View {
             _school = State(initialValue: school)
             _isNewSchool = State(initialValue: false)
         } else {
-            _school = State(initialValue: School(id: UUID().uuidString, name: "", category: "", description: "", imageUrl: "", foundationDate: Date(), studentCount: 0))
+            _school = State(initialValue: School(id: UUID().uuidString, name: "", category: "", description: "", imageUrl: "", foundationDate: Date(), studentCount: 0, attributes: ["":false]))
             _isNewSchool = State(initialValue: true)
         }
     }

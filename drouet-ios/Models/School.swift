@@ -15,4 +15,5 @@ struct School: Identifiable, Codable {
     var imageUrl: String
     var foundationDate: Date
     var studentCount: Int
+    var attributes: [String: Bool]
 }

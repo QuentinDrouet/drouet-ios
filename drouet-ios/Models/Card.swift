@@ -11,4 +11,5 @@ struct Card: Identifiable, Codable {
     var id: String
     var text: String
     var category: String
+    var criteria: String
 }

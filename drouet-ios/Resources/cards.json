@@ -1,27 +1,15 @@
 [
     {
         "id": "1",
-        "text": "Diminiuer le nombre de parlementaires d'au moins un tiers",
-        "category": "Méthode de Travail"
+        "text": "J'aime travailler en équipe sur des projets.",
+        "category": "Méthode de Travail",
+        "criteria": "travailEquipe"
     },
     {
         "id": "2",
         "text": "Je préfère étudier dans une grande ville.",
-        "category": "Environnement"
-    },
-    {
-        "id": "3",
-        "text": "Je préfère étudier dans une grande ville.",
-        "category": "Environnement"
-    },
-    {
-        "id": "3",
-        "text": "Je préfère étudier dans une grande ville.",
-        "category": "Environnement"
-    },
-    {
-        "id": "2",
-        "text": "Je préfère étudier dans une grande ville.",
-        "category": "Environnement"
+        "category": "Environnement",
+        "criteria": "grandeVille"
     }
 ]
+

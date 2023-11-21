@@ -6,6 +6,10 @@
         "description": "Une description de l'École d'Ingénierie XYZ.",
         "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_esilv_png_blanc.png",
         "foundationDate": "1960-01-01",
+        "attributes": {
+            "travailEquipe": true,
+            "grandeVille": true
+        },
         "studentCount": 1500
     },
     {
@@ -15,6 +19,10 @@
         "description": "Une description de l'École des Arts ABC.",
         "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_esilv_png_blanc.png",
         "foundationDate": "1960-01-01",
-        "studentCount": 1500
+        "studentCount": 1500,
+        "attributes": {
+            "travailEquipe": false,
+            "grandeVille": false
+        }
     }
 ]

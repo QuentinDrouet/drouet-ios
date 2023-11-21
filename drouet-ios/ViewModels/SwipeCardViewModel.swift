@@ -9,10 +9,20 @@ import Foundation
 
 class CardViewModel: ObservableObject {
     @Published var cards: [Card] = []
+    var responses: [String: Bool] = [:]
     
     init() {
         loadCards()
     }
+    
+    func swipeCard(_ card: Card, direction: SwipeDirection) {
+            switch direction {
+            case .right:
+                responses[card.criteria] = true
+            case .left:
+                responses[card.criteria] = false
+            }
+        }
     
     func loadCards() {
         guard let url = Bundle.main.url(forResource: "cards", withExtension: "json") else {
@@ -30,3 +40,6 @@ class CardViewModel: ObservableObject {
     }
 }
 
+enum SwipeDirection {
+    case left, right
+}

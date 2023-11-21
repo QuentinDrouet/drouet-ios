@@ -13,22 +13,36 @@ struct SwipeCardView: View {
     
     var body: some View {
         NavigationView {
-            CardStack(
-                direction: LeftRight.direction,
-                data: viewModel.cards,
-                onSwipe: { card, direction in
-                    print("Swiped \(card) to \(direction)")
-                },
-                content: { card, direction, isOnTop in
-                    CardView(card: card)
-                        .padding()
+            VStack {
+                CardStack(
+                    direction: LeftRight.direction,
+                    data: viewModel.cards,
+                    onSwipe: { card, direction in
+                        let swipeDirection: SwipeDirection = (direction == .left) ? .left : .right
+                        viewModel.swipeCard(card, direction: swipeDirection)
+                        print("Swiped \(card.text) to \(direction)")
+                    },
+                    content: { card, direction, isOnTop in
+                        CardView(card: card)
+                            .padding()
+                    }
+                )
+                .environment(\.cardStackConfiguration, CardStackConfiguration(
+                    maxVisibleCards: 3,
+                    cardOffset: 20
+                ))
+                
+                Button("Voir les Réponses") {
+                    printResponses()
                 }
-            )
-            .environment(\.cardStackConfiguration, CardStackConfiguration(
-              maxVisibleCards: 3,
-              cardOffset: 20
-            ))
+            }
             .navigationTitle("Cards")
+        }
+    }
+    
+    private func printResponses() {
+        for (criteria, response) in viewModel.responses {
+            print("\(criteria): \(response ? "like" : "dislike")")
         }
     }
 }
