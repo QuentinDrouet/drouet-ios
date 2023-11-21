@@ -12,7 +12,7 @@ struct School: Identifiable, Codable {
     var name: String
     var category: String
     var description: String
-    var imageUrl: URL
+    var imageUrl: String
     var foundationDate: Date
     var studentCount: Int
 }

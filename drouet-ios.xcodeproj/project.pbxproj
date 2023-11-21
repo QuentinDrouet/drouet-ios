@@ -21,8 +21,8 @@
 		CD429C132B0B798C00B5823E /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C122B0B798C00B5823E /* RankingViewModel.swift */; };
 		CD429C172B0B79A400B5823E /* cards.json in Sources */ = {isa = PBXBuildFile; fileRef = CD429C162B0B79A400B5823E /* cards.json */; };
 		CD429C1B2B0B913D00B5823E /* schools.json in Resources */ = {isa = PBXBuildFile; fileRef = CD429C1A2B0B913D00B5823E /* schools.json */; };
-		CD429C1D2B0B928800B5823E /* AddSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C1C2B0B928800B5823E /* AddSchoolView.swift */; };
-		CD429C1F2B0B9F3400B5823E /* EditSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C1E2B0B9F3400B5823E /* EditSchoolView.swift */; };
+		CD429C652B0CA69E00B5823E /* SchoolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C642B0CA69E00B5823E /* SchoolDetailView.swift */; };
+		CD429C672B0CAE8A00B5823E /* AddOrEditSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C662B0CAE8A00B5823E /* AddOrEditSchoolView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,8 @@
 		CD429C122B0B798C00B5823E /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		CD429C162B0B79A400B5823E /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		CD429C1A2B0B913D00B5823E /* schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schools.json; sourceTree = "<group>"; };
-		CD429C1C2B0B928800B5823E /* AddSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolView.swift; sourceTree = "<group>"; };
-		CD429C1E2B0B9F3400B5823E /* EditSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSchoolView.swift; sourceTree = "<group>"; };
+		CD429C642B0CA69E00B5823E /* SchoolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailView.swift; sourceTree = "<group>"; };
+		CD429C662B0CAE8A00B5823E /* AddOrEditSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditSchoolView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,10 @@
 		CD429C002B0B784400B5823E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD429C682B0CAFE300B5823E /* SchoolList */,
 				CD429BEB2B0B6C2900B5823E /* ContentView.swift */,
-				CD429C042B0B789000B5823E /* SchoolListView.swift */,
 				CD429C062B0B789B00B5823E /* SwipeCardView.swift */,
 				CD429C082B0B78A500B5823E /* RankingView.swift */,
-				CD429C1C2B0B928800B5823E /* AddSchoolView.swift */,
-				CD429C1E2B0B9F3400B5823E /* EditSchoolView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,6 +131,16 @@
 				CD429C162B0B79A400B5823E /* cards.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CD429C682B0CAFE300B5823E /* SchoolList */ = {
+			isa = PBXGroup;
+			children = (
+				CD429C662B0CAE8A00B5823E /* AddOrEditSchoolView.swift */,
+				CD429C642B0CA69E00B5823E /* SchoolDetailView.swift */,
+				CD429C042B0B789000B5823E /* SchoolListView.swift */,
+			);
+			path = SchoolList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,17 +215,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD429BEC2B0B6C2900B5823E /* ContentView.swift in Sources */,
-				CD429C1F2B0B9F3400B5823E /* EditSchoolView.swift in Sources */,
 				CD429C112B0B794500B5823E /* SwipeCardViewModel.swift in Sources */,
 				CD429C0B2B0B791C00B5823E /* School.swift in Sources */,
 				CD429C172B0B79A400B5823E /* cards.json in Sources */,
 				CD429C0D2B0B792400B5823E /* Card.swift in Sources */,
 				CD429BEA2B0B6C2900B5823E /* drouet_iosApp.swift in Sources */,
+				CD429C672B0CAE8A00B5823E /* AddOrEditSchoolView.swift in Sources */,
+				CD429C652B0CA69E00B5823E /* SchoolDetailView.swift in Sources */,
 				CD429C132B0B798C00B5823E /* RankingViewModel.swift in Sources */,
 				CD429C0F2B0B793200B5823E /* SchoolListViewModel.swift in Sources */,
 				CD429C092B0B78A500B5823E /* RankingView.swift in Sources */,
 				CD429C052B0B789000B5823E /* SchoolListView.swift in Sources */,
-				CD429C1D2B0B928800B5823E /* AddSchoolView.swift in Sources */,
 				CD429C072B0B789B00B5823E /* SwipeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

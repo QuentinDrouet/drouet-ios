@@ -13,7 +13,7 @@ struct AddSchoolView: View {
     @State private var name = ""
     @State private var category = ""
     @State private var description = ""
-    @State private var imageUrlString = ""
+    @State private var imageUrl = ""
     @State private var foundationDate = Date()
     @State private var studentCountString = ""
     
@@ -23,7 +23,7 @@ struct AddSchoolView: View {
                 TextField("Nom", text: $name)
                 TextField("Catégorie", text: $category)
                 TextField("Description", text: $description)
-                TextField("URL de l'Image", text: $imageUrlString)
+                TextField("URL de l'Image", text: $imageUrl)
                 DatePicker("Date de Fondation", selection: $foundationDate, displayedComponents: .date)
                 TextField("Nombre d'Étudiants", text: $studentCountString)
                     .keyboardType(.numberPad)
@@ -41,10 +41,6 @@ struct AddSchoolView: View {
     }
     
     private func addSchool() {
-        guard let imageUrl = URL(string: imageUrlString) else {
-            return
-        }
-        
         let newSchool = School(
             id: UUID().uuidString,
             name: name,
