@@ -21,6 +21,7 @@ struct SwipeCardView: View {
                 },
                 content: { card, direction, isOnTop in
                     CardView(card: card)
+                        .padding()
                 }
             )
             .environment(\.cardStackConfiguration, CardStackConfiguration(

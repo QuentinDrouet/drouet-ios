@@ -27,8 +27,8 @@ struct CardView: View {
                 .cornerRadius(90)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .aspectRatio(1, contentMode: .fit)
         .padding()
-        .frame(width: 350, height: 350)
         .background(Color("CardBlue"))
         .cornerRadius(20)
     }
