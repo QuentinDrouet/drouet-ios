@@ -10,6 +10,7 @@ import CardStack
 
 struct SwipeCardView: View {
     @ObservedObject var viewModel = CardViewModel()
+    @State private var swipeDirection: SwipeDirection? = nil
     
     var body: some View {
         NavigationView {
@@ -20,7 +21,6 @@ struct SwipeCardView: View {
                     onSwipe: { card, direction in
                         let swipeDirection: SwipeDirection = (direction == .left) ? .left : .right
                         viewModel.swipeCard(card, direction: swipeDirection)
-                        print("Swiped \(card.text) to \(direction)")
                     },
                     content: { card, direction, isOnTop in
                         CardView(card: card)
@@ -31,18 +31,16 @@ struct SwipeCardView: View {
                     maxVisibleCards: 3,
                     cardOffset: 20
                 ))
-                
-                Button("Voir les Réponses") {
-                    printResponses()
-                }
+                .aspectRatio(1, contentMode: .fit)                
             }
+            .frame(maxHeight: .infinity, alignment: .top)
             .navigationTitle("Cards")
         }
     }
     
-    private func printResponses() {
-        for (criteria, response) in viewModel.responses {
-            print("\(criteria): \(response ? "like" : "dislike")")
+    func swipeCard(direction: SwipeDirection) {
+        if let card = viewModel.currentTopCard {
+            viewModel.swipeCard(card, direction: direction)
         }
     }
 }

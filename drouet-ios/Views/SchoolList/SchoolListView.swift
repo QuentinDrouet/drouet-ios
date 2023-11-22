@@ -10,6 +10,7 @@ import SwiftUI
 struct SchoolListView: View {
     @ObservedObject var viewModel = SchoolListViewModel()
     @State private var addSchool = false
+    @State private var showingCVECInput = false
     let dateFormatter: DateFormatter
     
     init() {
@@ -19,29 +20,58 @@ struct SchoolListView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.schools) { school in
-                    NavigationLink(destination: SchoolDetailView(school: school, viewModel: viewModel)) {
-                        HStack(spacing: 16) {
-                            AsyncImage(url: URL(string: school.imageUrl)) { image in
-                                image.resizable()
-                            } placeholder: {
-                                Circle().fill(Color.gray)
-                            }
-                            .frame(width: 70, height: 70)
+            VStack {
+                Button(action: {
+                    showingCVECInput = true
+                }) {
+                    HStack {
+                        Image(systemName: "doc.text")
+                            .foregroundColor(Color("CardBlue"))
+                            .padding(8)
+                            .background(Color.white)
                             .clipShape(Circle())
-                            
-                            VStack(alignment: .leading) {
-                                Text(school.name).font(.headline)
-                                Text(school.category).font(.subheadline).foregroundColor(.gray)
-                                Text(truncatedDescription(school.description)).font(.subheadline)
+                        
+                        Text("Vérifier le CVEC")
+                            .foregroundColor(Color.white)
+                        
+                        Spacer()
+                        
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(Color.white)
+                    }
+                }
+                .padding()
+                .background(Color("CardBlue"))
+                .cornerRadius(10)
+                .padding()
+                .sheet(isPresented: $showingCVECInput) {
+                    CVECInputView()
+                }
+                
+                List {
+                    ForEach(viewModel.schools) { school in
+                        NavigationLink(destination: SchoolDetailView(school: school, viewModel: viewModel)) {
+                            HStack(spacing: 16) {
+                                AsyncImage(url: URL(string: school.imageUrl)) { image in
+                                    image.resizable()
+                                } placeholder: {
+                                    Circle().fill(Color.gray)
+                                }
+                                .frame(width: 70, height: 70)
+                                .clipShape(Circle())
+                                
+                                VStack(alignment: .leading) {
+                                    Text(school.name).font(.headline)
+                                    Text(school.category).font(.subheadline).foregroundColor(.gray)
+                                    Text(truncatedDescription(school.description)).font(.subheadline)
+                                }
                             }
                         }
                     }
+                    .onDelete(perform: viewModel.deleteSchool)
                 }
-                .onDelete(perform: viewModel.deleteSchool)
             }
-            .navigationTitle("Écoles")
+            .navigationBarTitle("Écoles")
             .navigationBarItems(trailing: Button(action: {
                 addSchool = true
             }) {

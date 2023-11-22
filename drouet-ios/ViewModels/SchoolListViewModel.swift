@@ -46,4 +46,26 @@ class SchoolListViewModel: ObservableObject {
     func deleteSchool(at offsets: IndexSet) {
         schools.remove(atOffsets: offsets)
     }
+    
+    func rankSchools() {
+        let responses = UserDefaults.standard.object(forKey: "CardResponses") as? [String: Bool] ?? [:]
+        let rankedSchools = schools.sorted { (school1, school2) -> Bool in
+            let score1 = calculateScore(for: school1, basedOn: responses)
+            let score2 = calculateScore(for: school2, basedOn: responses)
+            return score1 > score2
+        }
+        
+        self.schools = rankedSchools
+    }
+    
+    private func calculateScore(for school: School, basedOn responses: [String: Bool]) -> Int {
+        var score = 0
+        for (criteria, userPreference) in responses {
+            if let schoolPreference = school.attributes[criteria] {
+                score += (schoolPreference == userPreference) ? 1 : 0
+            }
+        }
+        return score
+    }
+    
 }

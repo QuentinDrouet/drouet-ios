@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct RankingView: View {
+    @ObservedObject var schoolViewModel = SchoolListViewModel()
+    @State private var showingSettings = false
+
     var body: some View {
-        Text("Ranking")
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(schoolViewModel.schools) { school in
+                        Text(school.name)
+                    }
+                }
+                .onAppear {
+                    schoolViewModel.rankSchools()
+                }
+            }
+            .navigationTitle("Classement")
+        }
     }
 }
 
-struct RankingView_Previews: PreviewProvider {
-    static var previews: some View {
-        RankingView()
-    }
-}
