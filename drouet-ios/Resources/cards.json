@@ -3,13 +3,15 @@
         "id": "1",
         "text": "J'aime travailler en équipe sur des projets.",
         "category": "Méthode de Travail",
-        "criteria": "travailEquipe"
+        "criteria": "travailEquipe",
+        "color": "CardBlue"
     },
     {
         "id": "2",
         "text": "Je préfère étudier dans une grande ville.",
         "category": "Environnement",
-        "criteria": "grandeVille"
+        "criteria": "grandeVille",
+        "color": "CardGreen"
     }
 ]
 

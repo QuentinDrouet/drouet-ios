@@ -24,7 +24,6 @@
 		CD429C0D2B0B792400B5823E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C0C2B0B792400B5823E /* Card.swift */; };
 		CD429C0F2B0B793200B5823E /* SchoolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C0E2B0B793200B5823E /* SchoolListViewModel.swift */; };
 		CD429C112B0B794500B5823E /* SwipeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C102B0B794500B5823E /* SwipeCardViewModel.swift */; };
-		CD429C132B0B798C00B5823E /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C122B0B798C00B5823E /* RankingViewModel.swift */; };
 		CD429C1B2B0B913D00B5823E /* schools.json in Resources */ = {isa = PBXBuildFile; fileRef = CD429C1A2B0B913D00B5823E /* schools.json */; };
 		CD429C652B0CA69E00B5823E /* SchoolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C642B0CA69E00B5823E /* SchoolDetailView.swift */; };
 		CD429C672B0CAE8A00B5823E /* AddOrEditSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429C662B0CAE8A00B5823E /* AddOrEditSchoolView.swift */; };
@@ -48,7 +47,6 @@
 		CD429C0C2B0B792400B5823E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CD429C0E2B0B793200B5823E /* SchoolListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewModel.swift; sourceTree = "<group>"; };
 		CD429C102B0B794500B5823E /* SwipeCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardViewModel.swift; sourceTree = "<group>"; };
-		CD429C122B0B798C00B5823E /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		CD429C1A2B0B913D00B5823E /* schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schools.json; sourceTree = "<group>"; };
 		CD429C642B0CA69E00B5823E /* SchoolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailView.swift; sourceTree = "<group>"; };
 		CD429C662B0CAE8A00B5823E /* AddOrEditSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditSchoolView.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			children = (
 				CD429C0E2B0B793200B5823E /* SchoolListViewModel.swift */,
 				CD429C102B0B794500B5823E /* SwipeCardViewModel.swift */,
-				CD429C122B0B798C00B5823E /* RankingViewModel.swift */,
 				CD25BD132B0E310F008EE047 /* CVECViewModel.swift */,
 			);
 			path = ViewModels;
@@ -245,7 +242,6 @@
 				CD429C652B0CA69E00B5823E /* SchoolDetailView.swift in Sources */,
 				CD25BD142B0E310F008EE047 /* CVECViewModel.swift in Sources */,
 				CD25BD0E2B0CCBF0008EE047 /* CardView.swift in Sources */,
-				CD429C132B0B798C00B5823E /* RankingViewModel.swift in Sources */,
 				CD429C0F2B0B793200B5823E /* SchoolListViewModel.swift in Sources */,
 				CD25BD122B0E1878008EE047 /* CVECInputView.swift in Sources */,
 				CD429C092B0B78A500B5823E /* RankingView.swift in Sources */,

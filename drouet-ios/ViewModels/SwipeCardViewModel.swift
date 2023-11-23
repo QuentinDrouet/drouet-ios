@@ -9,14 +9,12 @@ import Foundation
 
 class CardViewModel: ObservableObject {
     @Published var cards: [Card] = []
-    var responses: [String: Bool]
-    var swipedCardIDs: Set<String> {
+    @Published var responses: [String: Bool]
+    @Published var shouldRefreshCards = false
+    @Published var swipedCardIDs: Set<String> {
         didSet {
             UserDefaults.standard.set(Array(swipedCardIDs), forKey: "SwipedCardIDs")
         }
-    }
-    var currentTopCard: Card? {
-        cards.first
     }
     
     init() {
@@ -40,6 +38,15 @@ class CardViewModel: ObservableObject {
         } catch {
             print("Erreur lors de la lecture ou du décodage du JSON : \(error)")
         }
+    }
+    
+    func resetData() {
+        responses = [:]
+        swipedCardIDs = []
+        UserDefaults.standard.removeObject(forKey: "CardResponses")
+        UserDefaults.standard.removeObject(forKey: "SwipedCardIDs")
+        shouldRefreshCards = true
+        loadCards()
     }
     
     func swipeCard(_ card: Card, direction: SwipeDirection) {

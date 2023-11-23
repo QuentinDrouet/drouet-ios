@@ -36,7 +36,7 @@ class SchoolListViewModel: ObservableObject {
     func addSchool(_ school: School) {
         schools.append(school)
     }
-    
+
     func updateSchool(_ updatedSchool: School) {
         if let index = schools.firstIndex(where: { $0.id == updatedSchool.id }) {
             schools[index] = updatedSchool
@@ -67,5 +67,4 @@ class SchoolListViewModel: ObservableObject {
         }
         return score
     }
-    
 }

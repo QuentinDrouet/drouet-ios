@@ -9,8 +9,8 @@ import SwiftUI
 import CardStack
 
 struct SwipeCardView: View {
-    @ObservedObject var viewModel = CardViewModel()
-    @State private var swipeDirection: SwipeDirection? = nil
+    @ObservedObject var viewModel : CardViewModel
+    @State var reloadToken = UUID()
     
     var body: some View {
         NavigationView {
@@ -27,20 +27,24 @@ struct SwipeCardView: View {
                             .padding()
                     }
                 )
+                .id(reloadToken)
+                .onChange(of: viewModel.shouldRefreshCards) { _ in
+                    if viewModel.shouldRefreshCards {
+                        reloadToken = UUID()
+                        viewModel.shouldRefreshCards = false
+                    }
+                }
                 .environment(\.cardStackConfiguration, CardStackConfiguration(
                     maxVisibleCards: 3,
                     cardOffset: 20
                 ))
-                .aspectRatio(1, contentMode: .fit)                
+                .aspectRatio(1, contentMode: .fit)
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .navigationTitle("Cards")
-        }
-    }
-    
-    func swipeCard(direction: SwipeDirection) {
-        if let card = viewModel.currentTopCard {
-            viewModel.swipeCard(card, direction: direction)
+            .onAppear {
+                print(viewModel.cards.count)
+            }
         }
     }
 }

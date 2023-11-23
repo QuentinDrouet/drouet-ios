@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct SchoolListView: View {
-    @ObservedObject var viewModel = SchoolListViewModel()
+    @ObservedObject var viewModel: SchoolListViewModel
     @State private var addSchool = false
     @State private var showingCVECInput = false
     let dateFormatter: DateFormatter
     
-    init() {
-        dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
+    init(viewModel: SchoolListViewModel) {
+        self.viewModel = viewModel
+        self.dateFormatter = DateFormatter()
+        self.dateFormatter.dateStyle = .long
     }
     
     var body: some View {
@@ -89,11 +90,5 @@ struct SchoolListView: View {
             return String(description[..<index]) + "..."
         }
         return description
-    }
-}
-
-struct SchoolListView_Previews: PreviewProvider {
-    static var previews: some View {
-        SchoolListView()
     }
 }

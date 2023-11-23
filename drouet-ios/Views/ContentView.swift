@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var cardViewModel = CardViewModel()
+    @StateObject var schoolViewModel = SchoolListViewModel()
     
     var body: some View {
         TabView {
-            SwipeCardView()
+            SwipeCardView(viewModel: cardViewModel)
                 .tabItem {
                     Image(systemName: "hand.thumbsup.fill")
                 }
-            SchoolListView()
+            SchoolListView(viewModel: schoolViewModel)
                 .tabItem {
                     Image(systemName: "graduationcap.fill")
                 }
-            RankingView()
+            RankingView(schoolViewModel: schoolViewModel, cardViewModel: cardViewModel)
                 .tabItem {
                     Image(systemName: "trophy.fill")
                 }

@@ -12,24 +12,29 @@ struct CardView: View {
     
     var body: some View {
         VStack {
-            Text(card.text)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-            
             Spacer()
-            
+
             Text(card.category)
                 .padding(10)
                 .font(.subheadline)
-                .foregroundColor(Color("CardBlue"))
+                .foregroundColor(Color(card.color))
                 .background(.white)
                 .cornerRadius(90)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .center)
+
+            Text(card.text)
+                .padding(.top, 30)
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, alignment: .center)
+            
+            Spacer()
         }
         .aspectRatio(1, contentMode: .fit)
         .padding()
-        .background(Color("CardBlue"))
+        .background(Color(card.color))
         .cornerRadius(20)
     }
 }
