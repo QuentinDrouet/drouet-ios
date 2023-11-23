@@ -33,6 +33,7 @@ struct CVECInputView: View {
 
             if viewModel.isRequesting {
                 ProgressView()
+                    .frame(maxWidth: .infinity, alignment: .center)
             } else {
                 Button(action: {
                     viewModel.verifyCVECCode(code: cvecCode)
@@ -49,12 +50,18 @@ struct CVECInputView: View {
             switch viewModel.verificationStatus {
             case .success:
                 Image(systemName: "checkmark.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .padding(.top, 40)
                     .foregroundColor(.green)
-                    .font(.largeTitle)
+                    .frame(maxWidth: .infinity, alignment: .center)
             case .failure(_):
-                Image(systemName: "xmark.octagon")
+                Image(systemName: "xmark.circle")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .padding(.top, 40)
                     .foregroundColor(.red)
-                    .font(.largeTitle)
+                    .frame(maxWidth: .infinity, alignment: .center)
             case .none:
                 EmptyView()
             }

@@ -13,6 +13,7 @@
 		CD25BD122B0E1878008EE047 /* CVECInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD25BD112B0E1878008EE047 /* CVECInputView.swift */; };
 		CD25BD142B0E310F008EE047 /* CVECViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD25BD132B0E310F008EE047 /* CVECViewModel.swift */; };
 		CD25BD162B0E3266008EE047 /* CVEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD25BD152B0E3266008EE047 /* CVEC.swift */; };
+		CD3564492B0FADB70004A018 /* SchoolRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3564482B0FADB70004A018 /* SchoolRowView.swift */; };
 		CD429BEA2B0B6C2900B5823E /* drouet_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429BE92B0B6C2900B5823E /* drouet_iosApp.swift */; };
 		CD429BEC2B0B6C2900B5823E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429BEB2B0B6C2900B5823E /* ContentView.swift */; };
 		CD429BEE2B0B6C2A00B5823E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD429BED2B0B6C2A00B5823E /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		CD25BD112B0E1878008EE047 /* CVECInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVECInputView.swift; sourceTree = "<group>"; };
 		CD25BD132B0E310F008EE047 /* CVECViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVECViewModel.swift; sourceTree = "<group>"; };
 		CD25BD152B0E3266008EE047 /* CVEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVEC.swift; sourceTree = "<group>"; };
+		CD3564482B0FADB70004A018 /* SchoolRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRowView.swift; sourceTree = "<group>"; };
 		CD429BE62B0B6C2900B5823E /* drouet-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "drouet-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD429BE92B0B6C2900B5823E /* drouet_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drouet_iosApp.swift; sourceTree = "<group>"; };
 		CD429BEB2B0B6C2900B5823E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD35644A2B0FAE170004A018 /* SwipeCard */ = {
+			isa = PBXGroup;
+			children = (
+				CD25BD0D2B0CCBF0008EE047 /* CardView.swift */,
+				CD429C062B0B789B00B5823E /* SwipeCardView.swift */,
+			);
+			path = SwipeCard;
+			sourceTree = "<group>";
+		};
 		CD429BDD2B0B6C2900B5823E = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +116,10 @@
 		CD429C002B0B784400B5823E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD35644A2B0FAE170004A018 /* SwipeCard */,
 				CD429C682B0CAFE300B5823E /* SchoolList */,
 				CD429BEB2B0B6C2900B5823E /* ContentView.swift */,
-				CD429C062B0B789B00B5823E /* SwipeCardView.swift */,
 				CD429C082B0B78A500B5823E /* RankingView.swift */,
-				CD25BD0D2B0CCBF0008EE047 /* CardView.swift */,
 				CD25BD112B0E1878008EE047 /* CVECInputView.swift */,
 			);
 			path = Views;
@@ -147,6 +157,7 @@
 		CD429C682B0CAFE300B5823E /* SchoolList */ = {
 			isa = PBXGroup;
 			children = (
+				CD3564482B0FADB70004A018 /* SchoolRowView.swift */,
 				CD429C662B0CAE8A00B5823E /* AddOrEditSchoolView.swift */,
 				CD429C642B0CA69E00B5823E /* SchoolDetailView.swift */,
 				CD429C042B0B789000B5823E /* SchoolListView.swift */,
@@ -241,6 +252,7 @@
 				CD25BD162B0E3266008EE047 /* CVEC.swift in Sources */,
 				CD429C652B0CA69E00B5823E /* SchoolDetailView.swift in Sources */,
 				CD25BD142B0E310F008EE047 /* CVECViewModel.swift in Sources */,
+				CD3564492B0FADB70004A018 /* SchoolRowView.swift in Sources */,
 				CD25BD0E2B0CCBF0008EE047 /* CardView.swift in Sources */,
 				CD429C0F2B0B793200B5823E /* SchoolListViewModel.swift in Sources */,
 				CD25BD122B0E1878008EE047 /* CVECInputView.swift in Sources */,

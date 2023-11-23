@@ -9,6 +9,9 @@ import Foundation
 
 class SchoolListViewModel: ObservableObject {
     @Published var schools: [School] = []
+    var schoolsByCategory: [String: [School]] {
+        Dictionary(grouping: schools, by: { $0.category })
+    }
     
     init() {
         loadSchools()
@@ -36,15 +39,19 @@ class SchoolListViewModel: ObservableObject {
     func addSchool(_ school: School) {
         schools.append(school)
     }
-
+    
     func updateSchool(_ updatedSchool: School) {
         if let index = schools.firstIndex(where: { $0.id == updatedSchool.id }) {
             schools[index] = updatedSchool
         }
     }
     
-    func deleteSchool(at offsets: IndexSet) {
-        schools.remove(atOffsets: offsets)
+    func deleteSchool(category: String, at index: Int) {
+        if let schoolToDelete = schoolsByCategory[category]?[index] {
+            if let schoolIndex = schools.firstIndex(where: { $0.id == schoolToDelete.id }) {
+                schools.remove(at: schoolIndex)
+            }
+        }
     }
     
     func rankSchools() {

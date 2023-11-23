@@ -1,10 +1,10 @@
 [
     {
         "id": "1",
-        "name": "École d'Ingénierie XYZ",
+        "name": "ESILV",
         "category": "Ingénierie",
-        "description": "Une description de l'École d'Ingénierie XYZ.",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_esilv_png_blanc.png",
+        "description": "Une description de L'ESILV",
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/assets.atout-on-line.com/images/ingenieur/Logos_Ecoles/2018_2021/esilv_250.jpg",
         "foundationDate": "1960-01-01",
         "studentCount": 1500,
         "attributes": {
@@ -14,10 +14,10 @@
     },
     {
         "id": "2",
-        "name": "École des Arts ABC",
-        "category": "Arts",
-        "description": "Une description de l'École des Arts ABC.",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_esilv_png_blanc.png",
+        "name": "EMLV",
+        "category": "Commerce",
+        "description": "Une description de l'EMLV",
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/assets.atout-on-line.com/images/commerce/Logos_Ecoles/2018_2020/emlv_250.jpg",
         "foundationDate": "1960-01-01",
         "studentCount": 1500,
         "attributes": {
@@ -27,28 +27,15 @@
     },
     {
         "id": "3",
-        "name": "3",
-        "category": "Arts",
-        "description": "Une description de l'École des Arts ABC.",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_esilv_png_blanc.png",
+        "name": "IIM",
+        "category": "Digital",
+        "description": "Une description de l'IIM",
+        "imageUrl": "https://s3-eu-west-1.amazonaws.com/assets.atout-on-line.com/images/commerce/Logos_Ecoles/2018_2020/iim_250.jpg",
         "foundationDate": "1960-01-01",
         "studentCount": 1500,
         "attributes": {
             "travailEquipe": false,
             "grandeVille": true
-        }
-    },
-    {
-        "id": "4",
-        "name": "4",
-        "category": "Arts",
-        "description": "Une description de l'École des Arts ABC.",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_esilv_png_blanc.png",
-        "foundationDate": "1960-01-01",
-        "studentCount": 1500,
-        "attributes": {
-            "travailEquipe": true,
-            "grandeVille": false
         }
     }
 ]

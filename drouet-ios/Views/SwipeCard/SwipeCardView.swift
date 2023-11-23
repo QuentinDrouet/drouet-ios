@@ -42,9 +42,6 @@ struct SwipeCardView: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .navigationTitle("Cards")
-            .onAppear {
-                print(viewModel.cards.count)
-            }
         }
     }
 }

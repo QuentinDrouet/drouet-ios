@@ -50,45 +50,37 @@ struct SchoolListView: View {
                 }
                 
                 List {
-                    ForEach(viewModel.schools) { school in
-                        NavigationLink(destination: SchoolDetailView(school: school, viewModel: viewModel)) {
-                            HStack(spacing: 16) {
-                                AsyncImage(url: URL(string: school.imageUrl)) { image in
-                                    image.resizable()
-                                } placeholder: {
-                                    Circle().fill(Color.gray)
-                                }
-                                .frame(width: 70, height: 70)
-                                .clipShape(Circle())
-                                
-                                VStack(alignment: .leading) {
-                                    Text(school.name).font(.headline)
-                                    Text(school.category).font(.subheadline).foregroundColor(.gray)
-                                    Text(truncatedDescription(school.description)).font(.subheadline)
+                    ForEach(viewModel.schoolsByCategory.keys.sorted(), id: \.self) { category in
+                        Section(header: Text(category)) {
+                            ForEach(viewModel.schoolsByCategory[category] ?? [], id: \.id) { school in
+                                NavigationLink(destination: SchoolDetailView(school: school, viewModel: viewModel)) {
+                                    SchoolRowView(school: school)
                                 }
                             }
-                        }
+                            .onDelete { indexSet in
+                                indexSet.forEach { index in
+                                    viewModel.deleteSchool(category: category, at: index)
+                                }
+                            }
+                        }.listRowSeparator(.hidden)
                     }
-                    .onDelete(perform: viewModel.deleteSchool)
                 }
+                .listStyle(.plain)
+                .scrollContentBackground(.hidden)
             }
             .navigationBarTitle("Écoles")
             .navigationBarItems(trailing: Button(action: {
                 addSchool = true
             }) {
                 Image(systemName: "plus")
+                    .foregroundColor(.white)
+                    .padding(10)
+                    .background(Color("Red"))
+                    .clipShape(Circle())
             })
             .sheet(isPresented: $addSchool) {
                 AddOrEditSchoolView(school: nil, viewModel: viewModel)
             }
         }
-    }
-    
-    private func truncatedDescription(_ description: String) -> String {
-        if description.count > 40 {
-            let index = description.index(description.startIndex, offsetBy: 40)
-            return String(description[..<index]) + "..."
-        }
-        return description
     }
 }
